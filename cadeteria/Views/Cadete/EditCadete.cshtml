@@ -1,0 +1,13 @@
+@model ViewModel.UpdateCadeteVM
+
+<a asp-action="ListCadetes">Cadetes registrados</a>
+<form asp-controller="Cadete" asp-action="EditCadete" method="post">
+    @* <input type="hidden" asp-for="Id" /> *@
+    <label for="name">Nombre</label>
+    <input type="text" id="name" asp-for="Name" required>
+    <label for="address">Dirección</label>
+    <input type="text" id="address" asp-for="Address" required>
+    <label for="phone">Tel</label>
+    <input type="text" id="phone" asp-for="Phone" required>
+    <input type="submit">
+</form>
