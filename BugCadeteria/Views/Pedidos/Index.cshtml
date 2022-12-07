@@ -1,0 +1,27 @@
+@model IEnumerable<ViewModel.IndexVM>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Pedido</th>
+      <th scope="col">Estado</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+@foreach (var item in Model)
+{
+    <tr>
+      <td>@item.Id</td>
+      <td>@item.Obs</td>
+      <td>@item.State</td>
+      <td>
+        @* <a asp-action="" class="btn btn-outline-success">Pedidos</a> *@
+        <a asp-controller="Clientes" asp-action="UpdateCliente" asp-route-id="@item.Id" class="btn btn-outline-info">Editar</a>
+        <a asp-controller="Clientes" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Borrar</a>
+      </td>
+    </tr>
+}
+  </tbody>
+</table>

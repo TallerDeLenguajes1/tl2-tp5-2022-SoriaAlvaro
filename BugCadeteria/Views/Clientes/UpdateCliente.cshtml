@@ -1,0 +1,20 @@
+@model ViewModel.UpdateClienteVM
+
+<form class="row g-2" method="post" asp-controller="Clientes" asp-action="Edit">
+  <input type="hidden" asp-for="Id">
+  <div class="col-md-6">
+    <label for="inputName" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="inputName" required asp-for="Name">
+  </div>
+  <div class="col-md-6">
+    <label for="inputAddress" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Calle Falsa 1234" required asp-for="Address">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPhone" class="form-label">Telefono</label>
+    <input type="text" class="form-control" id="inputPhone" placeholder="+54" required asp-for="Phone">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>

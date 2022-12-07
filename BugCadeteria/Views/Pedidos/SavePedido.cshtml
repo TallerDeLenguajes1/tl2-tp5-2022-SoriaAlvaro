@@ -1,0 +1,16 @@
+@model ViewModel.SavePedidoVM
+
+<form class="row g-2" method="post" asp-controller="Pedidos" asp-action="Save">
+  <div class="col-md-6">
+    <label for="inputName" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="inputName" required asp-for="Obs">
+  </div>
+    <div class="col-md-6">
+      <label asp-for="Id" class="control-label"></label>
+      <select class="form-select" asp-for="Id" asp-items="Model.listClientes"></select>
+    </div>
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>
