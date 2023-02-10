@@ -1,0 +1,17 @@
+@model Project_To_Do_List.ViewModels.EditTaskVM
+
+<form class="form method="post" asp-controller="Tareas" asp-action="Edit">
+  <input type="hidden" asp-for="id"/>
+  <div class="form-item">
+    <label for="inputTitle" class="form-label"></label>
+    <input type="text" class="input" id="inputTitle" required asp-for="title" placeholder="Titulo...">
+  </div>
+  <div class="form-item">
+    <label for="inputDescript" class="form-label"></label>
+    <textarea class="input" id="inputDescript" required asp-for="description"
+    placeholder="Descpripción..."></textarea>
+  </div>
+  <div class="form-btn">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>

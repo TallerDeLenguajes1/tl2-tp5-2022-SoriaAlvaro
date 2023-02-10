@@ -1,0 +1,16 @@
+@model Project_To_Do_List.ViewModels.CreateTaskVM
+<h1>To do list</h1>
+<form class="form method="post" asp-controller="Tareas" asp-action="Save">
+  <div class="form-item">
+    <label for="inputTitle" class="form-label"></label>
+    <input type="text" class="input" id="inputTitle" required asp-for="title" placeholder="Titulo...">
+  </div>
+  <div class="form-item">
+    <label for="inputDescript" class="form-label"></label>
+    <textarea class="input" id="inputDescript" required asp-for="description"
+    placeholder="Ingresa una descpripción..."></textarea>
+  </div>
+  <div class="form-btn">
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </div>
+</form>
